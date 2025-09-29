@@ -17,6 +17,7 @@ const quizRoutes = require('./routes/quizzes');
 const userRoutes = require('./routes/users');
 const leaderboardRoutes = require('./routes/leaderboard');
 const aiRoutes = require('./routes/ai');
+const contactRoutes = require('./routes/contact');
 
 // Import services
 const NotificationService = require('./services/notificationService');
@@ -73,7 +74,7 @@ app.use('/api/quizzes', quizRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/ai', aiRoutes);
-app.use('/api/contact', require('./routes/contact'));
+app.use('/api/contact', contactRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {
