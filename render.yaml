@@ -29,7 +29,7 @@ services:
   - type: web
     name: edugame-frontend
     env: static
-    plan: free
+    plan: starter
     buildCommand: cd FE && npm install && npm run build
     staticPublishPath: FE/build
     envVars:
