@@ -3,8 +3,8 @@ services:
     name: edugame-backend
     env: node
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd BE && npm install
+    startCommand: cd BE && npm start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
