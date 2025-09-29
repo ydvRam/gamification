@@ -12,9 +12,7 @@ services:
       - key: PORT
         value: 10000
       - key: MONGODB_URI
-        fromDatabase:
-          name: edugame-db
-          property: connectionString
+        value: mongodb+srv://ramyadav8395_db_user:N03dZxjmVro4jAqg@edugame-cluster.zixabb7.mongodb.net/edugame?retryWrites=true&w=majority&appName=edugame-cluster
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRE
