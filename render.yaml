@@ -30,8 +30,8 @@ services:
     name: edugame-frontend
     env: static
     plan: free
-    buildCommand: cd ../FE && npm install && npm run build
-    staticPublishPath: ../FE/build
+    buildCommand: cd FE && npm install && npm run build
+    staticPublishPath: FE/build
     envVars:
       - key: REACT_APP_API_URL
         value: https://edugame-backend.onrender.com/api
