@@ -31,9 +31,9 @@ services:
     staticPublishPath: FE/build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://edugame-backend.onrender.com/api
+        value: https://edugame-backend-hftv.onrender.com/api
       - key: REACT_APP_SOCKET_URL
-        value: https://edugame-backend.onrender.com
+        value: https://edugame-backend-hftv.onrender.com
 
 databases:
   - name: edugame-db
