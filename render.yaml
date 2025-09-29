@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: edugame-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromDatabase:
+          name: edugame-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: FRONTEND_URL
+        value: https://edugame-frontend.onrender.com
+      - key: EMAIL_USER
+        value: ramyadav8395@gmail.com
+      - key: EMAIL_PASS
+        value: your_gmail_app_password
+
+  - type: web
+    name: edugame-frontend
+    env: static
+    plan: free
+    buildCommand: cd ../FE && npm install && npm run build
+    staticPublishPath: ../FE/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://edugame-backend.onrender.com/api
+      - key: REACT_APP_SOCKET_URL
+        value: https://edugame-backend.onrender.com
+
+databases:
+  - name: edugame-db
+    plan: free
