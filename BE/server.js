@@ -25,17 +25,27 @@ const NotificationService = require('./services/notificationService');
 // Initialize Express app
 const app = express();
 
-// Connect to database
-connectDB();
+// CORS first so all responses (including errors) can include CORS headers
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://edugame-frontend.onrender.com',
+  'http://localhost:3000'
+].filter(Boolean);
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+    return cb(null, false);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
-// Security middleware
+// Security middleware (after CORS)
 app.use(helmet());
 
-// CORS configuration
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true
-}));
+// Connect to database
+connectDB();
 
 // Rate limiting - DISABLED FOR DEVELOPMENT
 // TODO: Re-enable rate limiting for production deployment
