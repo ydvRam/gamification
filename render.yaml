@@ -11,8 +11,9 @@ services:
         value: production
       - key: PORT
         value: 10000
+      # IMPORTANT: Replace with Standard connection string in Render Dashboard (not mongodb+srv) to fix querySrv ENOTFOUND. In Atlas: Connect → Connect using MongoDB Compass → copy the URI (starts with mongodb://).
       - key: MONGODB_URI
-        value: mongodb+srv://ramyadav8395_db_user:N03dZxjmVro4jAqg@edugame-cluster.zixabb7.mongodb.net/edugame?retryWrites=true&w=majority&appName=edugame-cluster
+        value: mongodb://ramyadav8395_db_user:<Yadav@7457>@ac-esiniss-shard-00-00.zixabb7.mongodb.net:27017,ac-esiniss-shard-00-01.zixabb7.mongodb.net:27017,ac-esiniss-shard-00-02.zixabb7.mongodb.net:27017/?replicaSet=atlas-is5rao-shard-0&ssl=true&authSource=admin
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRE

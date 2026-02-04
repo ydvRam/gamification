@@ -1,6 +1,6 @@
 # 🎮 EduGame - Gamified Learning Platform
 
-A modern, interactive educational platform that transforms learning into an engaging experience through gamification, real-time progress tracking, and achievement systems.
+A modern, interactive educational platform that transforms learning into an engaging experience through interactive quizzes, achievements, and real-time progress tracking.
 
 ![Status](https://img.shields.io/badge/status-live-success)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -48,9 +48,8 @@ A modern, interactive educational platform that transforms learning into an enga
 
 ## 🎯 Live Demo
 
-**Frontend:** [https://edugame-frontend.onrender.com](https://edugame-frontend.onrender.com)
-
-**Backend API:** [https://edugame-backend-hftv.onrender.com](https://edugame-backend-hftv.onrender.com)
+**Frontend:** https://edugame-frontend.onrender.com  
+**Backend API:** https://edugame-backend-hftv.onrender.com
 
 ---
 
@@ -62,23 +61,12 @@ Glowing card effects on quiz and achievement displays create visual appeal, dyna
 
 ## 📧 Contact
 
-**Email:** ramyadav8395@gmail.com
-
-**Phone:** +91 7457807892
-
+**Email:** ramyadav8395@gmail.com  
+**Phone:** +91 7457807892  
 **Location:** Agra, Uttar Pradesh, India
-
----
 
 ---
 
 ## 🙏 Acknowledgments
 
-Built with passion for education and technology, designed to make learning fun and engaging, and powered by modern web technologies.
-
----
-
-<div align="center">
-  <strong>Made with ❤️ for learners everywhere</strong>
-</div>
-
+Built with passion for education and technology,
